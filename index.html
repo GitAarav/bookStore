@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookHaven - Your Online Bookstore</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">BookHaven</a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for books...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li class="dropdown">
+                    <a href="categories.html">Categories <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="categories.html?category=fiction">Fiction</a>
+                        <a href="categories.html?category=sci-fi">Sci-Fi</a>
+                        <a href="categories.html?category=ncert">NCERT</a>
+                        <a href="categories.html?category=publications">Publications</a>
+                    </div>
+                </li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart <span class="cart-count">0</span></a></li>
+                <li><a href="login.html"><i class="fas fa-user"></i> My Account</a></li>
+                <li><button id="theme-toggle" class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+       
+
+        <!-- Homepage Slider -->
+        <section class="slider-section">
+            <div class="section-title">
+                <h2>Browse Our Collection</h2>
+            </div>
+            <div class="slider-container">
+                <div class="slider-tabs">
+                    <button class="tab-btn active" data-tab="sale">On Sale</button>
+                    <button class="tab-btn" data-tab="bestseller">Bestsellers</button>
+                    <button class="tab-btn" data-tab="latest">Latest Releases</button>
+                    <button class="tab-btn" data-tab="featured">Featured</button>
+                </div>
+                
+                <div class="slider-content">
+                    <!-- Sale Tab Content -->
+                    <div class="tab-content active" id="sale">
+                        <div class="book-slider">
+                            <div class="book-card">
+                              
+                                <div class="book-info">
+                                    <h3>The Silent Patient</h3>
+                                    <p class="author">Alex Michaelides</p>
+                                    <p class="description">A psychological thriller about a woman who shoots her husband and then stops speaking, and the therapist determined to unravel her mystery.</p>
+                                    <div class="price">
+                                        <span class="current-price">₹999</span>
+                                        <span class="original-price">₹1,299</span>
+                                    </div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="book-card">
+                             
+                                <div class="book-info">
+                                    <h3>Educated</h3>
+                                    <p class="author">Tara Westover</p>
+                                    <p class="description">A memoir about a woman who was raised in a survivalist family in Idaho and eventually earned a PhD from Cambridge University.</p>
+                                    <div class="price">
+                                        <span class="current-price">₹1,149</span>
+                                        <span class="original-price">₹1,399</span>
+                                    </div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="book-card">
+                              
+                                <div class="book-info">
+                                    <h3>Becoming</h3>
+                                    <p class="author">Michelle Obama</p>
+                                    <p class="description">The deeply personal memoir of the former First Lady of the United States, reflecting on her experiences from childhood to the White House.</p>
+                                    <div class="price">
+                                        <span class="current-price">₹1,049</span>
+                                        <span class="original-price">₹1,399</span>
+                                    </div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="book-card">
+                                
+                                <div class="book-info">
+                                    <h3>The Alchemist</h3>
+                                    <p class="author">Paulo Coelho</p>
+                                    <p class="description">A philosophical novel about a shepherd boy who dreams of finding a worldly treasure and embarks on a journey of self-discovery.</p>
+                                    <div class="price">
+                                        <span class="current-price">₹799</span>
+                                        <span class="original-price">₹1,149</span>
+                                    </div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Bestseller Tab Content -->
+                    <div class="tab-content" id="bestseller">
+                        <div class="book-slider">
+                            <div class="book-card">
+                               
+                                
+                                    <div class="bestseller-badge">Bestseller</div>
+                                
+                                <div class="book-info">
+                                    <h3>Where the Crawdads Sing</h3>
+                                    <p class="author">Delia Owens</p>
+                                    <p class="description">A murder mystery and coming-of-age story about a girl who grew up isolated in the marshes of North Carolina.</p>
+                                    <div class="price">
+                                        <span class="current-price">₹1,149</span>
+                                    </div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="book-card">
+                                
+                                
+                                    <div class="bestseller-badge">Bestseller</div>
+                                
+                                <div class="book-info">
+                                    <h3>Atomic Habits</h3>
+                                    <p class="author">James Clear</p>
+                                    <p class="description">A practical guide to building good habits and breaking bad ones, based on proven scientific research.</p>
+                                    <div class="price">
+                                        <span class="current-price">₹1,299</span>
+                                    </div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="book-card">
+                                
+                                
+                                    <div class="bestseller-badge">Bestseller</div>
+                                
+                                <div class="book-info">
+                                    <h3>The Four Winds</h3>
+                                    <p class="author">Kristin Hannah</p>
+                                    <p class="description">An epic historical novel about a woman's struggle to survive the Great Depression and the Dust Bowl in Texas.</p>
+                                    <div class="price">
+                                        <span class="current-price">₹1,249</span>
+                                    </div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="book-card">
+                                
+                                
+                                    <div class="bestseller-badge">Bestseller</div>
+                               
+                                <div class="book-info">
+                                    <h3>The Midnight Library</h3>
+                                    <p class="author">Matt Haig</p>
+                                    <p class="description">A novel about a library between life and death where each book represents a different version of what your life could have been.</p>
+                                    <div class="price">
+                                        <span class="current-price">₹1,099</span>
+                                    </div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Latest Releases Tab Content -->
+                    <div class="tab-content" id="latest">
+                        <div class="book-slider">
+                            <div class="book-card">
+                                
+                                
+                                    <div class="new-badge">New</div>
+                                
+                                <div class="book-info">
+                                    <h3>The Last Thing He Told Me</h3>
+                                    <p class="author">Laura Dave</p>
+                                    <p class="description">A gripping mystery about a woman who must piece together the truth about her husband's disappearance and the secret past he was hiding.</p>
+                                    <div class="price">
+                                        <span class="current-price">₹1,449</span>
+                                    </div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="book-card">
+                               
+                                
+                                    <div class="new-badge">New</div>
+                             
+                                <div class="book-info">
+                                    <h3>Project Hail Mary</h3>
+                                    <p class="author">Andy Weir</p>
+                                    <p class="description">A science fiction thriller about an astronaut who wakes up alone on a spaceship with no memory and must save humanity from extinction.</p>
+                                    <div class="price">
+                                        <span class="current-price">₹1,549</span>
+                                    </div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="book-card">
+                                
+                                
+                                    <div class="new-badge">New</div>
+                                
+                                <div class="book-info">
+                                    <h3>The Hill We Climb</h3>
+                                    <p class="author">Amanda Gorman</p>
+                                    <p class="description">The powerful poem read by Amanda Gorman at the 2021 presidential inauguration, celebrating America's promise and the journey toward unity.</p>
+                                    <div class="price">
+                                        <span class="current-price">₹999</span>
+                                    </div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="book-card">
+                              
+                                
+                                    <div class="new-badge">New</div>
+                             
+                                <div class="book-info">
+                                    <h3>The Invisible Life of Addie LaRue</h3>
+                                    <p class="author">V.E. Schwab</p>
+                                    <p class="description">A fantasy novel about a young woman who makes a Faustian bargain to live forever but is cursed to be forgotten by everyone she meets.</p>
+                                    <div class="price">
+                                        <span class="current-price">₹1,299</span>
+                                    </div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Featured Tab Content -->
+                    <div class="tab-content" id="featured">
+                        <div class="book-slider">
+                            <div class="book-card">
+                                
+                                
+                                    <div class="featured-badge">Featured</div>
+                                <div class="book-info">
+                                    <h3>Dune</h3>
+                                    <p class="author">Frank Herbert</p>
+                                    <p class="description">A science fiction masterpiece set on the desert planet Arrakis, featuring political intrigue, religious themes, and ecological concerns.</p>
+                                    <div class="price">
+                                        <span class="current-price">₹1,249</span>
+                                    </div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="book-card">
+                                
+                                
+                                    <div class="featured-badge">Featured</div>
+
+                                <div class="book-info">
+                                    <h3>The Vanishing Half</h3>
+                                    <p class="author">Brit Bennett</p>
+                                    <p class="description">A multi-generational family saga about identical twin sisters who choose to live in two very different worlds—one black and one white.</p>
+                                    <div class="price">
+                                        <span class="current-price">₹1,149</span>
+                                    </div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="book-card">
+                             
+                                
+                                    <div class="featured-badge">Featured</div>
+                                
+                                <div class="book-info">
+                                    <h3>The Song of Achilles</h3>
+                                    <p class="author">Madeline Miller</p>
+                                    <p class="description">A retelling of Homer's Iliad from the perspective of Patroclus, exploring his relationship with the legendary warrior Achilles.</p>
+                                    <div class="price">
+                                        <span class="current-price">₹1,099</span>
+                                    </div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                            <div class="book-card">
+                                
+                                
+                                    <div class="featured-badge">Featured</div>
+                               
+                                <div class="book-info">
+                                    <h3>The Night Circus</h3>
+                                    <p class="author">Erin Morgenstern</p>
+                                    <p class="description">A fantasy novel about a mysterious circus that only appears at night and the competition between two young magicians within its black-and-white tents.</p>
+                                    <div class="price">
+                                        <span class="current-price">₹999</span>
+                                    </div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Books Section -->
+        <section class="featured-books" id="featured">
+            <div class="section-title">
+                <h2>Featured Books</h2>
+                <p>Handpicked selections from our collection</p>
+            </div>
+            <div class="featured-grid">
+                <div class="book-card ">
+                  
+                    
+                        <div class="featured-badge">Featured</div>
+                 
+                    <div class="book-info">
+                        <h3>The Lord of the Rings</h3>
+                        <p class="author">J.R.R. Tolkien</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <div class="price">
+                            <span class="current-price">₹1,999</span>
+                        </div>
+                        <p class="description">An epic fantasy trilogy that follows the quest to destroy a powerful ring and defeat the Dark Lord Sauron.</p>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="book-card">
+                    
+                    
+                    
+                    <div class="book-info">
+                        <h3>To Kill a Mockingbird</h3>
+                        <p class="author">Harper Lee</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(5.0)</span>
+                        </div>
+                        <div class="price">
+                            <span class="current-price">₹899</span>
+                        </div>
+                        <p class="description">A powerful story set in the 1930s that examines racial injustice through the eyes of a young girl in a small Southern town.</p>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="book-card">
+                    
+                    <div class="book-info">
+                        <h3>1984</h3>
+                        <p class="author">George Orwell</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(4.0)</span>
+                        </div>
+                        <div class="price">
+                            <span class="current-price">₹849</span>
+                        </div>
+                        <p class="description">A dystopian novel set in a totalitarian society where critical thought is suppressed and government surveillance is omnipresent.</p>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="book-card">
+                    
+                    <div class="book-info">
+                        <h3>Pride and Prejudice</h3>
+                        <p class="author">Jane Austen</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <div class="price">
+                            <span class="current-price">₹749</span>
+                        </div>
+                        <p class="description">A classic romantic novel about the spirited Elizabeth Bennet and her complicated relationship with the proud Mr. Darcy in 19th century England.</p>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="book-card">
+                    
+                    <div class="book-info">
+                        <h3>The Great Gatsby</h3>
+                        <p class="author">F. Scott Fitzgerald</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(4.0)</span>
+                        </div>
+                        <div class="price">
+                            <span class="current-price">₹699</span>
+                        </div>
+                        <p class="description">A novel exploring themes of decadence, idealism, and the American Dream through the story of mysterious millionaire Jay Gatsby in the Roaring Twenties.</p>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stay Updated Section -->
+        <section class="stay-updated">
+            <div class="update-content">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to our newsletter to get updates on new releases, exclusive offers, and more!</p>
+                <form id="newsletter-form" class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Feedback Form -->
+        <section class="feedback">
+            <div class="section-title">
+                <h2>We Value Your Feedback</h2>
+                <p>Let us know how we can improve your experience</p>
+            </div>
+            <form id="feedback-form" class="feedback-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <span class="error-message"></span>
+                </div>
+                <button type="submit" class="btn">Submit Feedback</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h3>About BookHaven</h3>
+                <p>BookHaven is your one-stop destination for all types of books. We offer a wide selection of genres at competitive prices with excellent customer service.</p>
+            </div>
+            <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="#">Bestsellers</a></li>
+                    <li><a href="#">New Releases</a></li>
+                    <li><a href="#">Special Offers</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 24 A , Sikka Nagar , Jodhpur</p>
+                <p><i class="fas fa-phone"></i> 4567809876</p>
+                <p><i class="fas fa-envelope"></i> info@bookhaven.com</p>
+            </div>
+            <div class="footer-section social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 BookHaven. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Notification -->
+    <div id="cart-notification" class="notification">
+        <div class="notification-content">
+            <i class="fas fa-check-circle"></i>
+            <p>Item added to cart!</p>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories - BookHaven</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">BookHaven</a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for books...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="categories.html" class="active">Categories <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="categories.html?category=fiction">Fiction</a>
+                        <a href="categories.html?category=sci-fi">Sci-Fi</a>
+                        <a href="categories.html?category=ncert">NCERT</a>
+                        <a href="categories.html?category=publications">Publications</a>
+                    </div>
+                </li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart <span class="cart-count">0</span></a></li>
+                <li><a href="login.html"><i class="fas fa-user"></i> My Account</a></li>
+                <li><button id="theme-toggle" class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Category Header -->
+        <section class="category-header">
+            <h1 id="category-title">All Categories</h1>
+            <div class="category-filters">
+                <div class="filter-group">
+                    <label for="sort-by">Sort By:</label>
+                    <select id="sort-by">
+                        <option value="popularity">Popularity</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="newest">Newest Arrivals</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="filter-by">Filter By:</label>
+                    <select id="filter-by">
+                        <option value="all">All</option>
+                        <option value="in-stock">In Stock</option>
+                        <option value="on-sale">On Sale</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category Navigation -->
+        <section class="category-nav">
+            <div class="category-list">
+                <button class="category-btn active" data-category="all">All Categories</button>
+                <button class="category-btn" data-category="fiction">Fiction</button>
+                <button class="category-btn" data-category="sci-fi">Sci-Fi</button>
+                <button class="category-btn" data-category="ncert">NCERT</button>
+                <button class="category-btn" data-category="publications">Publications</button>
+            </div>
+        </section>
+
+        <!-- Books Grid -->
+        <section class="books-grid">
+            <div class="book-card" data-category="fiction">
+                
+                <div class="book-info">
+                    <h3>The Catcher in the Rye</h3>
+                    <p class="author">J.D. Salinger</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(4.0)</span>
+                    </div>
+                    <p class="publication">Little, Brown and Company, 1951</p>
+                    <div class="price">
+                        <span class="current-price">₹1999</span>
+                    </div>
+                    <p class="description">A classic novel about teenage alienation and angst.</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="book-card" data-category="fiction">
+             
+                <div class="book-info">
+                    <h3>The Great Gatsby</h3>
+                    <p class="author">F. Scott Fitzgerald</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(4.5)</span>
+                    </div>
+                    <p class="publication">Scribner, 1925</p>
+                    <div class="price">
+                        <span class="current-price">₹1799</span>
+                    </div>
+                    <p class="description">A novel of the Jazz Age that follows the mysterious millionaire Jay Gatsby.</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="book-card" data-category="sci-fi">
+                
+                <div class="book-info">
+                    <h3>Dune</h3>
+                    <p class="author">Frank Herbert</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(5.0)</span>
+                    </div>
+                    <p class="publication">Chilton Books, 1965</p>
+                    <div class="price">
+                        <span class="current-price">₹1499</span>
+                    </div>
+                    <p class="description">A science fiction novel set in a distant future amidst a feudal interstellar society.</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="book-card" data-category="sci-fi">
+          
+                <div class="book-info">
+                    <h3>Neuromancer</h3>
+                    <p class="author">William Gibson</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(4.0)</span>
+                    </div>
+                    <p class="publication">Ace, 1984</p>
+                    <div class="price">
+                        <span class="current-price">₹1099</span>
+                    </div>
+                    <p class="description">A groundbreaking cyberpunk novel that explores artificial intelligence and virtual reality.</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="book-card" data-category="ncert">
+               
+                <div class="book-info">
+                    <h3>NCERT Science: Class 10</h3>
+                    <p class="author">NCERT</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(5.0)</span>
+                    </div>
+                    <p class="publication">NCERT, 2023</p>
+                    <div class="price">
+                        <span class="current-price">₹699</span>
+                    </div>
+                    <p class="description">Comprehensive science textbook for Class 10 students.</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="book-card" data-category="ncert">
+                
+                <div class="book-info">
+                    <h3>NCERT Mathematics: Class 12</h3>
+                    <p class="author">NCERT</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(4.5)</span>
+                    </div>
+                    <p class="publication">NCERT, 2023</p>
+                    <div class="price">
+                        <span class="current-price">₹999</span>
+                    </div>
+                    <p class="description">Advanced mathematics textbook for Class 12 students.</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="book-card" data-category="publications">
+               
+                <div class="book-info">
+                    <h3>Advanced Physics</h3>
+                    <p class="author">Oxford Publications</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(4.0)</span>
+                    </div>
+                    <p class="publication">Oxford University Press, 2022</p>
+                    <div class="price">
+                        <span class="current-price">₹2000</span>
+                    </div>
+                    <p class="description">Comprehensive guide to advanced physics concepts.</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="book-card" data-category="publications">
+               
+                <div class="book-info">
+                    <h3>Modern Chemistry</h3>
+                    <p class="author">Cambridge Publications</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(5.0)</span>
+                    </div>
+                    <p class="publication">Cambridge University Press, 2023</p>
+                    <div class="price">
+                        <span class="current-price">₹1899</span>
+                    </div>
+                    <p class="description">A modern approach to chemistry for advanced students.</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h3>About BookHaven</h3>
+                <p>BookHaven is your one-stop destination for all types of books. We offer a wide selection of genres at competitive prices with excellent customer service.</p>
+            </div>
+            <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="#">Bestsellers</a></li>
+                    <li><a href="#">New Releases</a></li>
+                    <li><a href="#">Special Offers</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 24 A , Sikka Nagar , Jodhpur</p>
+                <p><i class="fas fa-phone"></i> 4567809876</p>
+                <p><i class="fas fa-envelope"></i> info@bookhaven.com</p>
+            </div>
+            <div class="footer-section social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 BookHaven. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Notification -->
+    <div id="cart-notification" class="notification">
+        <div class="notification-content">
+            <i class="fas fa-check-circle"></i>
+            <p>Item added to cart!</p>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
+
